@@ -37,12 +37,14 @@ A Java and Spring Boot-based web application designed to help users track person
 
 ```
 
+
+```
+
 2. **Build the project**:
 ```bash
 ./mvnw clean install
 
 ```
-
 
 3. **Run the application**:
 ```bash
