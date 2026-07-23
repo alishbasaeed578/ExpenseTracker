@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinFlow Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="sidebar-brand-icon"><i class="fas fa-wallet"></i></div>
+    <span class="sidebar-brand-name">FinFlow</span>
+  </div>
+
+  <ul class="sidebar-nav">
+    <li><a class="nav-link active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+    <li><a class="nav-link"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+    <li><a class="nav-link"><i class="fas fa-chart-pie"></i> Analytics</a></li>
+    <li><a class="nav-link"><i class="fas fa-credit-card"></i> Cards</a></li>
+    <li><a class="nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <div class="user-profile">
+      <div class="user-avatar">NK</div>
+      <div class="user-info">
+        <div class="user-name">Nick Kenter</div>
+        <div class="user-role">Premium Member</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<div class="main-wrapper">
+  <header class="header">
+    <div class="header-greeting">
+      <h1>Good Morning, Nick!</h1>
+      <p>Here's what's happening with your finances today</p>
+    </div>
+    <div class="header-controls">
+      <div class="dropdown">Daily <i class="fas fa-chevron-down"></i></div>
+      <div class="date-picker">
+        <i class="fas fa-calendar"></i>
+        16 January 2025
+      </div>
+      <button class="export-btn">
+        <i class="fas fa-download"></i>
+        Export
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="dashboard-grid">
+      <div class="card stat-card income">
+        <div class="stat-icon income-icon"><i class="fas fa-arrow-trend-up"></i></div>
+        <div class="card-header">
+          <h3 class="card-title">Monthly Income</h3>
+          <button class="card-menu"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+        <div class="amount income-amount">$2,645.00</div>
+        <div class="change">
+          <i class="fas fa-arrow-up"></i>
+          12% vs last month
+        </div>
+      </div>
+
+      <div class="card stat-card expense">
+        <div class="stat-icon expense-icon"><i class="fas fa-arrow-trend-down"></i></div>
+        <div class="card-header">
+          <h3 class="card-title">Monthly Expenses</h3>
+          <button class="card-menu"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+        <div class="amount expense-amount">$1,895.00</div>
+        <div class="change negative">
+          <i class="fas fa-arrow-up"></i>
+          8% vs last month
+        </div>
+      </div>
+
+      <div class="card my-card">
+        <div class="card-header">
+          <h3 class="card-title">My Card</h3>
+          <button class="card-menu" style="color: rgba(255,255,255,0.7)"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+        <div class="card-subtitle">Linked to your primary wallet</div>
+
+        <div class="card-chip"></div>
+        <div class="card-number">5435 2735 0037 0015</div>
+        <div class="card-holder">Nick Kenter</div>
+
+        <div class="card-logo">
+          <div class="card-logo-circle logo-red"></div>
+          <div class="card-logo-circle logo-orange"></div>
+        </div>
+
+        <div class="spending-section">
+          <div>Spending Limit</div>
+          <div class="spending-limit">$4,645.00</div>
+          <div class="spending-used">used from $12,645.00</div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Overview</h3>
+          <div style="display: flex; gap: 8px;">
+            <div class="dropdown">Yearly <i class="fas fa-chevron-down"></i></div>
+            <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <div class="chart-bar" style="height: 120px;"></div>
+          <div class="chart-bar" style="height: 80px;"></div>
+          <div class="chart-bar active" style="height: 200px;">
+            <div class="chart-tooltip">
+              <div>April 2025</div>
+              <div style="color: #34d399;">Income: $894</div>
+              <div style="color: #f87171;">Expenses: $768</div>
+            </div>
+            <div class="chart-bar-income" style="height: 120px;"></div>
+            <div class="chart-bar-expense" style="height: 80px;"></div>
+          </div>
+          <div class="chart-bar" style="height: 150px;"></div>
+          <div class="chart-bar" style="height: 90px;"></div>
+          <div class="chart-bar" style="height: 110px;"></div>
+          <div class="chart-bar" style="height: 130px;"></div>
+          <div class="chart-bar" style="height: 100px;"></div>
+          <div class="chart-bar" style="height: 85px;"></div>
+          <div class="chart-bar" style="height: 160px;"></div>
+          <div class="chart-bar" style="height: 95px;"></div>
+        </div>
+        <div class="chart-labels">
+          <span>Feb</span><span>Mar</span><span>Apr</span><span>May</span>
+          <span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span>
+          <span>Oct</span><span>Nov</span><span>Dec</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">All Expenses</h3>
+          <button class="card-menu"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+        <p class="card-desc">Spending breakdown by category</p>
+
+        <div class="expenses-breakdown">
+          <div class="total-expenses">$24,645.00</div>
+
+          <div class="period-tabs">
+            <span class="period-tab">Daily</span>
+            <span class="period-tab">Weekly</span>
+            <span class="period-tab active">Monthly</span>
+          </div>
+
+          <div class="period-values">
+            <span>$1,345</span>
+            <span>$7,136</span>
+            <span>$14,927</span>
+          </div>
+
+          <div class="color-bar"></div>
+
+          <ul class="expense-categories">
+            <li class="expense-category">
+              <div class="category-info">
+                <div class="category-dot dot-food"></div>
+                <span>Food & Health</span>
+              </div>
+              <span>$863</span>
+            </li>
+            <li class="expense-category">
+              <div class="category-info">
+                <div class="category-dot dot-entertainment"></div>
+                <span>Entertainment</span>
+              </div>
+              <span>$248</span>
+            </li>
+            <li class="expense-category">
+              <div class="category-info">
+                <div class="category-dot dot-shopping"></div>
+                <span>Shopping</span>
+              </div>
+              <span>$1,835</span>
+            </li>
+            <li class="expense-category">
+              <div class="category-info">
+                <div class="category-dot dot-investment"></div>
+                <span>Investment</span>
+              </div>
+              <span>$1,835</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card transactions-section">
+      <div class="card-header">
+        <h3 class="card-title">Recent Transactions</h3>
+        <div class="filters">
+          <button class="filter-btn"><i class="fas fa-sort"></i> Sort</button>
+          <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+        </div>
+      </div>
+
+      <table class="transactions-table">
+        <thead>
+        <tr>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Jan 14, 2025</td>
+          <td>Subscription</td>
+          <td>$440.00</td>
+          <td><span class="status-success">Success</span></td>
+          <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+        </tr>
+        <tr>
+          <td>Jan 10, 2025</td>
+          <td>Transfer</td>
+          <td>$440.00</td>
+          <td><span class="status-success">Success</span></td>
+          <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+        </tr>
+        <tr>
+          <td>Jan 8, 2025</td>
+          <td>Transfer</td>
+          <td>$440.00</td>
+          <td><span class="status-success">Success</span></td>
+          <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<div class="add-buttons">
+  <button class="fab fab-income" onclick="openIncomeModal()" title="Add Income">
+    <i class="fas fa-plus"></i>
+  </button>
+  <button class="fab fab-expense" onclick="openExpenseModal()" title="Add Expense">
+    <i class="fas fa-minus"></i>
+  </button>
+</div>
+
+<div id="incomeModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title">Add Income</h2>
+      <button class="close-btn" onclick="closeModal('incomeModal')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="incomeForm">
+        <div class="form-group">
+          <label class="form-label">Amount</label>
+          <input type="number" class="form-input" id="incomeAmount" placeholder="Enter amount" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <select class="form-select" id="incomeCategory" required>
+            <option value="">Select category</option>
+            <option value="salary">Salary</option>
+            <option value="freelance">Freelance</option>
+            <option value="business">Business</option>
+            <option value="investment">Investment</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-input" id="incomeDescription" placeholder="Enter description">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-input" id="incomeDate" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('incomeModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="addIncome()">Add Income</button>
+    </div>
+  </div>
+</div>
+
+<div id="expenseModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title">Add Expense</h2>
+      <button class="close-btn" onclick="closeModal('expenseModal')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="expenseForm">
+        <div class="form-group">
+          <label class="form-label">Amount</label>
+          <input type="number" class="form-input" id="expenseAmount" placeholder="Enter amount" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <select class="form-select" id="expenseCategory" required>
+            <option value="">Select category</option>
+            <option value="food">Food & Health</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="shopping">Shopping</option>
+            <option value="investment">Investment</option>
+            <option value="transport">Transport</option>
+            <option value="utilities">Utilities</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-input" id="expenseDescription" placeholder="Enter description">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-input" id="expenseDate" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('expenseModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="addExpense()">Add Expense</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>
