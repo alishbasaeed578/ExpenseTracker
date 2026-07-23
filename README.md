@@ -35,10 +35,6 @@ A Java and Spring Boot-based web application designed to help users track person
    git clone [https://github.com/alishbasaeed578/ExpenseTracker.git](https://github.com/alishbasaeed578/ExpenseTracker.git)
    cd ExpenseTracker
 
-```
-
-
-```
 
 2. **Build the project**:
 ```bash
