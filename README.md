@@ -2,6 +2,8 @@
 
 A Java and Spring Boot-based web application designed to help users track personal expenses, manage budgets, and maintain account authentication.
 
+---
+
 ## 🚀 Features
 
 * **User Authentication**: Secure user login and registration system.
@@ -35,15 +37,19 @@ A Java and Spring Boot-based web application designed to help users track person
 
 ```
 
-2. Build the project:
+2. **Build the project**:
+```bash
 ./mvnw clean install
 
+```
 
 
-3. Run the application:
+3. **Run the application**:
+```bash
 ./mvnw spring-boot:run
 
+```
 
 
-4. Access the application:
+4. **Access the application**:
 Open your browser and navigate to `http://localhost:8080`.
